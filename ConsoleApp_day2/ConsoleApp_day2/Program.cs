@@ -1,5 +1,6 @@
 ﻿using System;
 using static System.Console;
+using Inheritance;
 
 namespace ConsoleApp_day2
 {
@@ -37,7 +38,7 @@ namespace ConsoleApp_day2
 
             //=====================================================================
             //this 파트
-            ThisClass myThis = new ThisClass();
+            /*ThisClass myThis = new ThisClass();
 
             myThis.PrintFields();
             Console.WriteLine();
@@ -47,7 +48,17 @@ namespace ConsoleApp_day2
             Console.WriteLine();
 
             ThisClass c = new ThisClass(10, 20);
-            c.PrintFields();
+            c.PrintFields();*/
+
+            //========================================================================
+            //상속
+            Base a = new Base("a");
+            a.BaseMethod();
+
+            Derived b = new Derived("b");
+            b.BaseMethod();
+            b.DerivedMethod();
+
         }
     }
 }
