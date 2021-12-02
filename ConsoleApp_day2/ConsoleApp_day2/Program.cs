@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Console;
-using Inheritance;
+//using Inheritance;
+using TypeCasting;
 
 namespace ConsoleApp_day2
 {
@@ -52,13 +53,35 @@ namespace ConsoleApp_day2
 
             //========================================================================
             //상속
-            Base a = new Base("a");
+           /* Base a = new Base("a");
             a.BaseMethod();
 
             Derived b = new Derived("b");
             b.BaseMethod();
-            b.DerivedMethod();
+            b.DerivedMethod();*/
 
+            //======================================================================
+            //타입캐스팅
+            Mammal mammal = new Dog();
+            Dog dog;
+
+            if (mammal is Dog)
+            {
+                dog = (Dog)mammal;
+                dog.Bark();
+            }
+
+            Mammal mammal2 = new Cat();
+
+            Cat cat = mammal2 as Cat;
+            if (cat != null)
+                cat.Meow();
+
+            Cat cat2 = mammal as Cat;
+            if (cat2 != null)
+                cat2.Meow();
+            else
+                Console.WriteLine("cat2 is not a Cat");
         }
     }
 }
