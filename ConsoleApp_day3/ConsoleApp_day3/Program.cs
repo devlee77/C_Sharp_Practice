@@ -1,6 +1,7 @@
 ﻿using System;
 using IntegerExtension;
 using MultiInterfaceInheritance;
+using Abstract;
 
 namespace ConsoleApp_day3
 {
@@ -42,7 +43,7 @@ namespace ConsoleApp_day3
 
             //======================================================================
             //인터페이스
-            FlyingCar car = new FlyingCar();
+           /* FlyingCar car = new FlyingCar();
             car.Run();
             car.Fly();
 
@@ -50,7 +51,14 @@ namespace ConsoleApp_day3
             runnable.Run();
 
             IFlyable flyable = car as IFlyable;
-            flyable.Fly();
+            flyable.Fly();*/
+
+            //=======================================================================
+            //
+            AbstractBase obj = new Derived();
+            obj.AbstractMethodA();
+            obj.PublicMethodA();
+
         }
     }
 }
