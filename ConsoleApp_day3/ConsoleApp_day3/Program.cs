@@ -54,10 +54,12 @@ namespace ConsoleApp_day3
             flyable.Fly();*/
 
             //=======================================================================
-            //
-            AbstractBase obj = new Derived();
+            //추상클래스
+           /* AbstractBase obj = new Derived();
             obj.AbstractMethodA();
-            obj.PublicMethodA();
+            obj.PublicMethodA();*/
+
+            //=======================================================================
 
         }
     }
